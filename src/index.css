@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --surface-base: #ffffff;
+  --text-base: #111827;
+  --surface-divider: rgba(15, 23, 42, 0.12);
+}
+
+.dark {
+  --surface-base: #0b1018;
+  --text-base: #f5f5f5;
+  --surface-divider: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  background-color: var(--surface-base);
+  color: var(--text-base);
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass {
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(13, 71, 161, 0.12), rgba(255, 193, 7, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--surface-divider), transparent);
+}
+
+.ai-pulse {
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 3.2s ease-in-out infinite;
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.3);
+}
+
+.ai-pulse:hover {
+  box-shadow: 0 12px 36px rgba(124, 58, 237, 0.38);
+}
+
+.bg-hero-surface {
+  background-image: url("/bg-hero-light.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dark .bg-hero-surface {
+  background-image: url("/bg-hero-dark.svg");
+}
+
+.bg-section-surface {
+  background-image: url("/bg-section-light.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dark .bg-section-surface {
+  background-image: url("/bg-section-dark.svg");
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(124, 58, 237, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.35);
+  }
+}
