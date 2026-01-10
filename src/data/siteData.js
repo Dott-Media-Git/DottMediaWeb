@@ -4,6 +4,7 @@ import {
   FiCode,
   FiCpu,
   FiLayers,
+  FiMessageSquare,
   FiPenTool,
   FiShield,
   FiTarget,
@@ -18,6 +19,12 @@ export const stats = [
 ];
 
 export const services = [
+  {
+    title: "AI Sales Agent",
+    description: "Always-on lead engagement, qualification, and meeting booking.",
+    icon: FiMessageSquare,
+    focus: ["Instant response", "Qualified handoff", "Calendar booking"],
+  },
   {
     title: "Digital Marketing",
     description: "Performance-led campaigns, analytics, and omnichannel growth.",
