@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiClock, FiMessageSquare, FiPlay, FiStar, FiUserCheck } from "react-icons/fi";
+import {
+  FiArrowRight,
+  FiClock,
+  FiMessageSquare,
+  FiPlay,
+  FiPlayCircle,
+  FiStar,
+  FiUserCheck,
+} from "react-icons/fi";
 import { projects, services, stats, testimonials } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
@@ -219,6 +227,48 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="space-y-4">
+            <span className={badgeStyle}>Showreel</span>
+            <h2 className="text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
+              See Dott-Media in motion.
+            </h2>
+            <p className="max-w-2xl text-slate-700 dark:text-white/70">
+              A quick look at how we blend creative, AI, and growth engineering to deliver
+              measurable outcomes for modern teams.
+            </p>
+            <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-white/70">
+              <FiPlayCircle className="text-brand-amber" />
+              60-second studio reel.
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              Schedule a walkthrough <FiArrowRight />
+            </Link>
+          </div>
+
+          <motion.div
+            {...cardMotion}
+            className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-3 shadow-2xl dark:border-white/10 dark:bg-[#101a2c]/80"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(124,58,237,0.12),transparent_35%),radial-gradient(circle_at_80%_40%,rgba(245,158,11,0.18),transparent_35%)] opacity-90" />
+            <video
+              className="relative z-10 w-full rounded-2xl"
+              src="/media/dott-media-reel.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="metadata"
+            />
+          </motion.div>
         </div>
       </section>
 
