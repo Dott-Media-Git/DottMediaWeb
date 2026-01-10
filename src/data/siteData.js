@@ -65,7 +65,7 @@ export const projects = [
     tags: ["Lifecycle", "Shopify", "AI segmentation"],
     image: "/portfolio/aurora-commerce.svg",
     imageDark: "/portfolio/aurora-commerce-dark.svg",
-    imageAlt: "Abstract commerce growth dashboard illustration",
+    imageAlt: "Lifestyle scene of a commerce team reviewing online orders",
   },
   {
     title: "Northwind HQ",
@@ -75,7 +75,7 @@ export const projects = [
     tags: ["Brand strategy", "GTM", "ABM"],
     image: "/portfolio/northwind-hq.svg",
     imageDark: "/portfolio/northwind-hq-dark.svg",
-    imageAlt: "Layered brand system panels illustration",
+    imageAlt: "Lifestyle brand workshop with moodboards and color swatches",
   },
   {
     title: "Pulse Analytics",
@@ -85,7 +85,7 @@ export const projects = [
     tags: ["Dashboards", "Product analytics", "Ops"],
     image: "/portfolio/pulse-analytics.svg",
     imageDark: "/portfolio/pulse-analytics-dark.svg",
-    imageAlt: "Analytics line chart and dashboard illustration",
+    imageAlt: "Operations team reviewing live analytics in a workspace",
   },
   {
     title: "Vertex Launch",
@@ -95,7 +95,7 @@ export const projects = [
     tags: ["Launch", "Performance media", "Automation"],
     image: "/portfolio/vertex-launch.svg",
     imageDark: "/portfolio/vertex-launch-dark.svg",
-    imageAlt: "Launch trajectory and momentum illustration",
+    imageAlt: "Product launch event with a large presentation screen",
   },
   {
     title: "Helio Health",
@@ -105,7 +105,7 @@ export const projects = [
     tags: ["Healthcare", "UX", "AI workflow"],
     image: "/portfolio/helio-health.svg",
     imageDark: "/portfolio/helio-health-dark.svg",
-    imageAlt: "Health and care experience illustration",
+    imageAlt: "Healthcare consultation with a clinician and patient",
   },
   {
     title: "Vela Mobility",
@@ -115,7 +115,7 @@ export const projects = [
     tags: ["Product marketing", "Partner GTM", "Brand"],
     image: "/portfolio/vela-mobility.svg",
     imageDark: "/portfolio/vela-mobility-dark.svg",
-    imageAlt: "Connected mobility network illustration",
+    imageAlt: "Urban commute planning on a mobility app",
   },
 ];
 
