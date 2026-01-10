@@ -64,6 +64,7 @@ export const projects = [
     summary: "Rebuilt lifecycle flows and personalization to unlock repeat purchases.",
     tags: ["Lifecycle", "Shopify", "AI segmentation"],
     image: "/portfolio/aurora-commerce.svg",
+    imageDark: "/portfolio/aurora-commerce-dark.svg",
     imageAlt: "Abstract commerce growth dashboard illustration",
   },
   {
@@ -73,6 +74,7 @@ export const projects = [
     summary: "New positioning and messaging system aligned sales and marketing.",
     tags: ["Brand strategy", "GTM", "ABM"],
     image: "/portfolio/northwind-hq.svg",
+    imageDark: "/portfolio/northwind-hq-dark.svg",
     imageAlt: "Layered brand system panels illustration",
   },
   {
@@ -82,6 +84,7 @@ export const projects = [
     summary: "Unified product data into a real-time insight command center.",
     tags: ["Dashboards", "Product analytics", "Ops"],
     image: "/portfolio/pulse-analytics.svg",
+    imageDark: "/portfolio/pulse-analytics-dark.svg",
     imageAlt: "Analytics line chart and dashboard illustration",
   },
   {
@@ -91,6 +94,7 @@ export const projects = [
     summary: "Multi-channel GTM with creative, media, and automated nurture.",
     tags: ["Launch", "Performance media", "Automation"],
     image: "/portfolio/vertex-launch.svg",
+    imageDark: "/portfolio/vertex-launch-dark.svg",
     imageAlt: "Launch trajectory and momentum illustration",
   },
   {
@@ -100,6 +104,7 @@ export const projects = [
     summary: "Human-first design combined with AI triage and onboarding journeys.",
     tags: ["Healthcare", "UX", "AI workflow"],
     image: "/portfolio/helio-health.svg",
+    imageDark: "/portfolio/helio-health-dark.svg",
     imageAlt: "Health and care experience illustration",
   },
   {
@@ -109,6 +114,7 @@ export const projects = [
     summary: "Storytelling and product marketing for a rapidly scaling mobility brand.",
     tags: ["Product marketing", "Partner GTM", "Brand"],
     image: "/portfolio/vela-mobility.svg",
+    imageDark: "/portfolio/vela-mobility-dark.svg",
     imageAlt: "Connected mobility network illustration",
   },
 ];
