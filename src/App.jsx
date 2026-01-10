@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
+import AiSalesAgent from "./pages/AiSalesAgent";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
@@ -22,6 +23,7 @@ import Terms from "./pages/Terms";
 const navLinks = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
+  { to: "/ai-sales-agent", label: "AI Sales Agent" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact" },
@@ -159,6 +161,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/ai-sales-agent" element={<AiSalesAgent />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

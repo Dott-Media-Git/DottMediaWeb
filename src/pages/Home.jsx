@@ -1,8 +1,26 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiPlay, FiStar } from "react-icons/fi";
+import { FiArrowRight, FiClock, FiMessageSquare, FiPlay, FiStar, FiUserCheck } from "react-icons/fi";
 import { projects, services, stats, testimonials } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
+
+const salesAgentHighlights = [
+  {
+    title: "Instant lead response",
+    description: "Engage inbound leads in under 60 seconds.",
+    icon: FiMessageSquare,
+  },
+  {
+    title: "Auto-qualification",
+    description: "Scores intent and routes to the right rep.",
+    icon: FiUserCheck,
+  },
+  {
+    title: "Always-on booking",
+    description: "Schedules meetings and sends confirmations.",
+    icon: FiClock,
+  },
+];
 
 const Home = () => {
   return (
@@ -139,6 +157,63 @@ const Home = () => {
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-brand-navy transition group-hover:text-brand-amber dark:text-white/80">
                     Learn more <FiArrowRight />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="space-y-4">
+            <span className={badgeStyle}>Product</span>
+            <h2 className="text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
+              AI Sales Agent that keeps your pipeline moving.
+            </h2>
+            <p className="max-w-2xl text-slate-700 dark:text-white/70">
+              Meet the AI Sales Agent built to qualify, follow up, and book meetings while your
+              team stays focused on closing. It works across chat, email, and web intake with
+              brand-safe responses.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {["24/7 coverage", "CRM synced", "Human handoff"].map((pill) => (
+                <span
+                  key={pill}
+                  className="rounded-full border border-slate-200/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-white/10 dark:text-white/70"
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
+            <Link
+              to="/ai-sales-agent"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              Explore AI Sales Agent <FiArrowRight />
+            </Link>
+          </div>
+
+          <div className="grid gap-4">
+            {salesAgentHighlights.map((item) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  {...cardMotion}
+                  className={`${surfaceClass} flex items-start gap-3 px-5 py-4`}
+                >
+                  <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-amber/20 text-lg text-brand-amber">
+                    <Icon />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                      {item.title}
+                    </p>
+                    <p className="text-sm text-slate-700 dark:text-white/70">
+                      {item.description}
+                    </p>
                   </div>
                 </motion.div>
               );
