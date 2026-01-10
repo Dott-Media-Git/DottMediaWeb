@@ -23,7 +23,6 @@ import Terms from "./pages/Terms";
 const navLinks = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
-  { to: "/ai-sales-agent", label: "AI Sales Agent" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact" },
