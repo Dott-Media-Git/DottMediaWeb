@@ -7,6 +7,7 @@ import {
   FiLayers,
   FiMessageSquare,
   FiPhoneCall,
+  FiShare2,
   FiShield,
   FiTrendingUp,
   FiUserCheck,
@@ -15,14 +16,24 @@ import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
 const featureHighlights = [
   {
-    title: "Instant lead response",
-    description: "Engage inbound leads in under 60 seconds across web, email, and chat.",
+    title: "Auto-replies & chatbots",
+    description: "Instant DM, inbox, and site chat responses with human escalation.",
     icon: FiMessageSquare,
   },
   {
     title: "Qualification & routing",
     description: "Scores intent, enriches data, and routes to the right rep automatically.",
     icon: FiUserCheck,
+  },
+  {
+    title: "Lead generation",
+    description: "Capture leads from social, ads, and landing pages with intent scoring.",
+    icon: FiTrendingUp,
+  },
+  {
+    title: "Social campaigns & posting",
+    description: "Plan, schedule, and optimize consistent social content across channels.",
+    icon: FiShare2,
   },
   {
     title: "Calendar-ready booking",
