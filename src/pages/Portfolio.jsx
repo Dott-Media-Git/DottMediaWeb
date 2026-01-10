@@ -62,8 +62,15 @@ const Portfolio = () => {
               transition={{ duration: 0.45, ease: "easeOut", delay: idx * 0.04 }}
               className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl dark:border-white/10 dark:bg-[#101a2c]/80"
             >
-              <div className="h-56 w-full bg-gradient-to-br from-brand-navy/30 via-white to-brand-amber/40 transition duration-500 group-hover:scale-[1.02] dark:from-brand-navy/70 dark:via-[#0b1018] dark:to-brand-amber/30" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,193,7,0.15),transparent_35%),radial-gradient(circle_at_80%_40%,rgba(13,71,161,0.25),transparent_30%)] transition duration-500 group-hover:opacity-90" />
+              <div className="relative h-56 w-full overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/20 dark:from-[#0b1018]/60 dark:via-transparent dark:to-[#0b1018]/20" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(124,58,237,0.18),transparent_35%),radial-gradient(circle_at_80%_40%,rgba(124,58,237,0.2),transparent_35%)] opacity-70" />
+              </div>
               <div className="relative space-y-3 px-6 pb-6 pt-4">
                 <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em] text-slate-600 dark:text-white/60">
                   <span>{project.category}</span>

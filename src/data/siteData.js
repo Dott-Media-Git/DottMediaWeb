@@ -63,6 +63,8 @@ export const projects = [
     result: "28% conversion lift",
     summary: "Rebuilt lifecycle flows and personalization to unlock repeat purchases.",
     tags: ["Lifecycle", "Shopify", "AI segmentation"],
+    image: "/portfolio/aurora-commerce.svg",
+    imageAlt: "Abstract commerce growth dashboard illustration",
   },
   {
     title: "Northwind HQ",
@@ -70,6 +72,8 @@ export const projects = [
     result: "42% faster pipeline",
     summary: "New positioning and messaging system aligned sales and marketing.",
     tags: ["Brand strategy", "GTM", "ABM"],
+    image: "/portfolio/northwind-hq.svg",
+    imageAlt: "Layered brand system panels illustration",
   },
   {
     title: "Pulse Analytics",
@@ -77,6 +81,8 @@ export const projects = [
     result: "Live ops visibility",
     summary: "Unified product data into a real-time insight command center.",
     tags: ["Dashboards", "Product analytics", "Ops"],
+    image: "/portfolio/pulse-analytics.svg",
+    imageAlt: "Analytics line chart and dashboard illustration",
   },
   {
     title: "Vertex Launch",
@@ -84,6 +90,8 @@ export const projects = [
     result: "Full-funnel rollout",
     summary: "Multi-channel GTM with creative, media, and automated nurture.",
     tags: ["Launch", "Performance media", "Automation"],
+    image: "/portfolio/vertex-launch.svg",
+    imageAlt: "Launch trajectory and momentum illustration",
   },
   {
     title: "Helio Health",
@@ -91,6 +99,8 @@ export const projects = [
     result: "65% engagement lift",
     summary: "Human-first design combined with AI triage and onboarding journeys.",
     tags: ["Healthcare", "UX", "AI workflow"],
+    image: "/portfolio/helio-health.svg",
+    imageAlt: "Health and care experience illustration",
   },
   {
     title: "Vela Mobility",
@@ -98,6 +108,8 @@ export const projects = [
     result: "New partner pipeline",
     summary: "Storytelling and product marketing for a rapidly scaling mobility brand.",
     tags: ["Product marketing", "Partner GTM", "Brand"],
+    image: "/portfolio/vela-mobility.svg",
+    imageAlt: "Connected mobility network illustration",
   },
 ];
 
