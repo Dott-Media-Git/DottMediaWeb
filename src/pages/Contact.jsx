@@ -74,13 +74,13 @@ const Contact = () => {
 
             <div className={`${surfaceClass} space-y-3 px-5 py-4`}>
               <div className="flex items-center gap-3 text-slate-800 dark:text-white/80">
-                <FiMail /> hello@dott-media.com
+                <FiMail /> info@dott-media.org
               </div>
               <div className="flex items-center gap-3 text-slate-800 dark:text-white/80">
-                <FiPhone /> +1 (555) 012-4456
+                <FiPhone /> +256 775 067 216 (WhatsApp)
               </div>
               <div className="flex items-center gap-3 text-slate-800 dark:text-white/80">
-                <FiMapPin /> 228 Market Street, Suite 400, San Francisco, CA
+                <FiMapPin /> Serving Kampala, Dubai, New York, England, and Johannesburg
               </div>
             </div>
 
@@ -99,7 +99,7 @@ const Contact = () => {
                   <FiClock className="text-brand-amber" /> Office hours
                 </div>
                 <p className="mt-2 text-sm text-slate-700 dark:text-white/70">
-                  Mon - Fri, 9:00 AM - 6:00 PM PST
+                  Mon - Fri, 9:00 AM - 6:00 PM EAT / GST
                 </p>
                 <p className="mt-2 text-xs text-slate-500 dark:text-white/50">
                   Remote-first team with global coverage.

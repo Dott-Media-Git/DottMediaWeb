@@ -3,9 +3,9 @@ const OG_IMAGE = `${BASE_URL}/og-image.svg`;
 const OG_IMAGE_ALT = "Dott-Media AI-Powered Digital Solutions";
 const DEFAULT_TITLE = "Dott-Media | AI-Powered Digital Agency";
 const DEFAULT_DESCRIPTION =
-  "Dott-Media is an AI-powered digital agency delivering branding, marketing, automation, web development, and the AI Sales Agent for growth-focused teams.";
+  "Dott-Media is an AI-powered digital agency serving Kampala, Dubai, New York, England, and Johannesburg with AI sales, marketing, automation, and digital product delivery.";
 const DEFAULT_KEYWORDS =
-  "Dott-Media, AI digital agency, AI sales agent, digital marketing, branding, automation, web development, lead generation";
+  "Dott-Media, AI Sales Agent Solutions, Digital Showroom Development, Automated Social Media Marketing, AI Chatbot Integration, AI-Powered CRM, AI digital agency, Kampala, Uganda, Dubai, UAE, New York, England, Europe, Johannesburg, South Africa, AI marketing, branding, automation, web development, lead generation";
 
 const seoData = {
   home: {
@@ -20,7 +20,7 @@ const seoData = {
   services: {
     title: "Services | Dott-Media",
     description:
-      "Explore Dott-Media services including AI Sales Agent, digital marketing, branding, AI automation, web development, and data insights.",
+      "Explore Dott-Media services: AI Sales Agent solutions, digital showroom development, automated social media marketing, AI chatbot integration, and AI-powered CRM workflows.",
     canonical: `${BASE_URL}/services`,
     image: OG_IMAGE,
     imageAlt: OG_IMAGE_ALT,
@@ -30,7 +30,7 @@ const seoData = {
   aiSalesAgent: {
     title: "AI Sales Agent | Dott-Media",
     description:
-      "Always-on AI Sales Agent that qualifies leads, schedules meetings, powers social campaigns, auto-replies, and lead generation.",
+      "Always-on AI Sales Agent that qualifies leads, schedules meetings, powers social campaigns, and syncs with AI-powered CRM workflows.",
     canonical: `${BASE_URL}/ai-sales-agent`,
     image: OG_IMAGE,
     imageAlt: OG_IMAGE_ALT,

@@ -46,6 +46,15 @@ const Home = () => {
             Dott-Media blends human strategy with AI execution to launch, optimize, and scale digital
             experiences. We craft the narrative, automate the ops, and deliver measurable momentum.
           </p>
+          <p className="max-w-2xl text-sm text-slate-600 dark:text-white/60">
+            Core capabilities include AI Sales Agent solutions, digital showroom development,
+            automated social media marketing, AI chatbot integration, and AI-powered CRM for
+            businesses.
+          </p>
+          <p className="max-w-2xl text-sm text-slate-600 dark:text-white/60">
+            Serving AI-focused startups, SMEs, agencies, automotive dealers, fintech platforms, and
+            enterprise teams across Kampala, Dubai, New York, England, and Johannesburg.
+          </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contact"

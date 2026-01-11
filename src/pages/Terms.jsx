@@ -74,7 +74,7 @@ const sections = [
   },
   {
     title: "Contact",
-    body: ["Questions about these terms? Reach us at hello@dott-media.com."],
+    body: ["Questions about these terms? Reach us at info@dott-media.org."],
   },
 ];
 

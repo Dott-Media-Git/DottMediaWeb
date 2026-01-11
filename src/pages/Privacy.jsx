@@ -92,7 +92,7 @@ const sections = [
   {
     title: "Contact",
     body: [
-      "Questions or requests? Email us at hello@dott-media.com and we will respond promptly.",
+      "Questions or requests? Email us at info@dott-media.org and we will respond promptly.",
     ],
   },
 ];

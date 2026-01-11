@@ -35,7 +35,7 @@ const serviceSchema = {
 
 const featureHighlights = [
   {
-    title: "Auto-replies & chatbots",
+    title: "AI chatbot integration",
     description: "Instant DM, inbox, and site chat responses with human escalation.",
     icon: FiMessageSquare,
   },
@@ -50,7 +50,7 @@ const featureHighlights = [
     icon: FiTrendingUp,
   },
   {
-    title: "Social campaigns & posting",
+    title: "Automated social media marketing",
     description: "Plan, schedule, and optimize consistent social content across channels.",
     icon: FiShare2,
   },
@@ -61,7 +61,7 @@ const featureHighlights = [
   },
   {
     title: "Pipeline visibility",
-    description: "Pushes notes, tags, and outcomes to your CRM without manual updates.",
+    description: "Pushes notes, tags, and outcomes to your CRM with AI-powered workflows.",
     icon: FiLayers,
   },
   {
@@ -123,8 +123,8 @@ const AiSalesAgent = () => {
             </h1>
             <p className="max-w-2xl text-lg text-slate-700 dark:text-white/70">
               Dott-Media&apos;s AI Sales Agent engages, qualifies, and schedules sales-ready leads
-              with human-grade conversations. You get more meetings, faster response times, and a
-              clean pipeline without the busywork.
+              with human-grade conversations. You get more meetings, faster response times, and
+              AI-powered CRM workflows for businesses without the busywork.
             </p>
             <div className="flex flex-wrap gap-3">
               {["24/7 coverage", "CRM synced", "Brand-safe messaging", "Human handoff"].map(
