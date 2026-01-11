@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import { NavLink, Route, Routes, Link } from "react-router-dom";
 import {
   FiArrowRight,
+  FiFacebook,
   FiInstagram,
   FiLinkedin,
   FiMenu,
   FiMoon,
   FiSun,
-  FiTwitter,
   FiX,
 } from "react-icons/fi";
+import { FaThreads } from "react-icons/fa6";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import AiSalesAgent from "./pages/AiSalesAgent";
@@ -209,25 +210,32 @@ const App = () => {
             </div>
             <div className="flex items-center gap-3 pt-3">
               <a
-                href="https://www.linkedin.com"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-white/5 dark:text-white"
-                aria-label="LinkedIn"
-              >
-                <FiLinkedin />
-              </a>
-              <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/dottmedia100"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-white/5 dark:text-white"
                 aria-label="Instagram"
               >
                 <FiInstagram />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://www.threads.net/@dottmedia100"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-white/5 dark:text-white"
-                aria-label="Twitter"
+                aria-label="Threads"
               >
-                <FiTwitter />
+                <FaThreads />
+              </a>
+              <a
+                href="https://www.facebook.com/Dott-Media"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-white/5 dark:text-white"
+                aria-label="Facebook"
+              >
+                <FiFacebook />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/dottmedia"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-white/5 dark:text-white"
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin />
               </a>
             </div>
           </div>
