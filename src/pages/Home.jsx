@@ -9,6 +9,8 @@ import {
   FiStar,
   FiUserCheck,
 } from "react-icons/fi";
+import Seo from "../components/Seo";
+import seoData from "../data/seoData";
 import { projects, services, stats, testimonials } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
@@ -33,6 +35,7 @@ const salesAgentHighlights = [
 const Home = () => {
   return (
     <>
+      <Seo {...seoData.home} />
       <section className="mx-auto flex max-w-6xl flex-col gap-12 px-5 py-16 md:flex-row md:items-center md:px-8 md:py-24">
         <motion.div {...cardMotion} className="flex-1 space-y-6">
           <span className={badgeStyle}>AI-First Agency</span>

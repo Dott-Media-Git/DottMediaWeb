@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FiArrowRight, FiFileText } from "react-icons/fi";
+import Seo from "../components/Seo";
+import seoData from "../data/seoData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
 const sections = [
@@ -79,6 +81,7 @@ const sections = [
 const Terms = () => {
   return (
     <>
+      <Seo {...seoData.terms} />
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-5">

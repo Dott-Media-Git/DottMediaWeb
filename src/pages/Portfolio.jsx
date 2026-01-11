@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FiArrowRight, FiTrendingUp, FiZap } from "react-icons/fi";
+import Seo from "../components/Seo";
+import seoData from "../data/seoData";
 import { projects, stats } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
@@ -16,6 +18,7 @@ const filters = [
 const Portfolio = () => {
   return (
     <>
+      <Seo {...seoData.portfolio} />
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-4">

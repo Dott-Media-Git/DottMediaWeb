@@ -12,7 +12,26 @@ import {
   FiTrendingUp,
   FiUserCheck,
 } from "react-icons/fi";
+import Seo from "../components/Seo";
+import seoData, { BASE_URL } from "../data/seoData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "AI Sales Agent",
+  description:
+    "Always-on AI Sales Agent that qualifies leads, schedules meetings, powers social campaigns, auto-replies, and lead generation.",
+  provider: {
+    "@type": "Organization",
+    name: "Dott-Media",
+    url: BASE_URL,
+  },
+  areaServed: "Worldwide",
+  serviceType: "AI Sales Agent",
+  url: `${BASE_URL}/ai-sales-agent`,
+  image: `${BASE_URL}/og-image.svg`,
+};
 
 const featureHighlights = [
   {
@@ -90,6 +109,11 @@ const integrations = [
 const AiSalesAgent = () => {
   return (
     <>
+      <Seo
+        {...seoData.aiSalesAgent}
+        jsonLd={serviceSchema}
+        jsonLdId="seo-ai-sales-agent"
+      />
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">

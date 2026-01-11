@@ -8,8 +8,23 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
+import Seo from "../components/Seo";
+import seoData from "../data/seoData";
 import { faqItems } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState("idle");
@@ -44,6 +59,7 @@ const Contact = () => {
 
   return (
     <>
+      <Seo {...seoData.contact} jsonLd={faqSchema} jsonLdId="seo-faq-contact" />
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="space-y-6">
