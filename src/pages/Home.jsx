@@ -11,6 +11,7 @@ import {
 } from "react-icons/fi";
 import Seo from "../components/Seo";
 import seoData from "../data/seoData";
+import { industries, locations } from "../data/landingPages";
 import { projects, services, stats, testimonials } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
@@ -239,6 +240,65 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <motion.div {...cardMotion} className={`${surfaceClass} space-y-4 px-6 py-6`}>
+            <span className={badgeStyle}>Locations</span>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+              We deliver across key global hubs.
+            </h2>
+            <p className="text-sm text-slate-700 dark:text-white/70">
+              Localized AI Sales Agent solutions, automated social media marketing, and digital
+              showroom development.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {locations.map((location) => (
+                <Link
+                  key={location.slug}
+                  to={`/locations/${location.slug}`}
+                  className="rounded-xl border border-slate-200/80 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-[#0f1624]/80 dark:text-white/80"
+                >
+                  {location.name}
+                </Link>
+              ))}
+            </div>
+            <Link
+              to="/locations"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              Explore all locations <FiArrowRight />
+            </Link>
+          </motion.div>
+
+          <motion.div {...cardMotion} className={`${surfaceClass} space-y-4 px-6 py-6`}>
+            <span className={badgeStyle}>Industries</span>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+              Built for teams that need AI momentum.
+            </h2>
+            <p className="text-sm text-slate-700 dark:text-white/70">
+              From AI startups to enterprise automation, we tailor workflows to your sales cycle.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {industries.map((industry) => (
+                <Link
+                  key={industry.slug}
+                  to={`/industries/${industry.slug}`}
+                  className="rounded-xl border border-slate-200/80 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/10 dark:bg-[#0f1624]/80 dark:text-white/80"
+                >
+                  {industry.name}
+                </Link>
+              ))}
+            </div>
+            <Link
+              to="/industries"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              Explore all industries <FiArrowRight />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

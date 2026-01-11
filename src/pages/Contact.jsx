@@ -80,7 +80,7 @@ const Contact = () => {
                 <FiPhone /> +256 775 067 216 (WhatsApp)
               </div>
               <div className="flex items-center gap-3 text-slate-800 dark:text-white/80">
-                <FiMapPin /> Serving Kampala, Dubai, New York, England, and Johannesburg
+                <FiMapPin /> Serving Kampala, Dubai, New York, England, Europe, and Johannesburg
               </div>
             </div>
 

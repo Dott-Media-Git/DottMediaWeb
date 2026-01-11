@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
 import Seo from "../components/Seo";
 import seoData from "../data/seoData";
+import { industries, locations } from "../data/landingPages";
 import { processSteps, services, stats, toolStack } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
@@ -110,6 +111,66 @@ const Services = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <motion.div {...cardMotion} className={`${surfaceClass} space-y-4 px-6 py-6`}>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 dark:text-white/60">
+              Locations
+            </p>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+              Global delivery, local execution.
+            </h2>
+            <p className="text-sm text-slate-700 dark:text-white/70">
+              We support teams in Kampala, Dubai, New York, England, Europe, and Johannesburg.
+            </p>
+            <div className="flex flex-wrap gap-2 text-xs text-slate-600 dark:text-white/60">
+              {locations.map((location) => (
+                <span
+                  key={location.slug}
+                  className="rounded-full border border-slate-200/80 px-3 py-1 dark:border-white/10"
+                >
+                  {location.name}
+                </span>
+              ))}
+            </div>
+            <Link
+              to="/locations"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              View locations <FiArrowRight />
+            </Link>
+          </motion.div>
+
+          <motion.div {...cardMotion} className={`${surfaceClass} space-y-4 px-6 py-6`}>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 dark:text-white/60">
+              Industries
+            </p>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+              Built for AI-first teams.
+            </h2>
+            <p className="text-sm text-slate-700 dark:text-white/70">
+              AI startups, SMEs, agencies, automotive, fintech, and corporate automation teams.
+            </p>
+            <div className="flex flex-wrap gap-2 text-xs text-slate-600 dark:text-white/60">
+              {industries.map((industry) => (
+                <span
+                  key={industry.slug}
+                  className="rounded-full border border-slate-200/80 px-3 py-1 dark:border-white/10"
+                >
+                  {industry.name}
+                </span>
+              ))}
+            </div>
+            <Link
+              to="/industries"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              View industries <FiArrowRight />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

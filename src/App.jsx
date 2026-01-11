@@ -16,6 +16,10 @@ import About from "./pages/About";
 import AiSalesAgent from "./pages/AiSalesAgent";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Industries from "./pages/Industries";
+import IndustryDetail from "./pages/IndustryDetail";
+import LocationDetail from "./pages/LocationDetail";
+import Locations from "./pages/Locations";
 import Portfolio from "./pages/Portfolio";
 import Privacy from "./pages/Privacy";
 import Services from "./pages/Services";
@@ -24,6 +28,8 @@ import Terms from "./pages/Terms";
 const navLinks = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
+  { to: "/locations", label: "Locations" },
+  { to: "/industries", label: "Industries" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact" },
@@ -162,6 +168,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/ai-sales-agent" element={<AiSalesAgent />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/locations/:slug" element={<LocationDetail />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/:slug" element={<IndustryDetail />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
