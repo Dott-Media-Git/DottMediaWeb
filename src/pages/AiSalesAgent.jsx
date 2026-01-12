@@ -4,6 +4,8 @@ import {
   FiActivity,
   FiArrowRight,
   FiClock,
+  FiDownload,
+  FiExternalLink,
   FiLayers,
   FiMessageSquare,
   FiPhoneCall,
@@ -31,6 +33,22 @@ const serviceSchema = {
   serviceType: "AI Sales Agent",
   url: `${BASE_URL}/ai-sales-agent`,
   image: `${BASE_URL}/og-image.svg`,
+};
+
+const salesAgentApp = {
+  url: "https://dottmediaapk.web.app",
+  downloads: [
+    {
+      label: "Download Android APK",
+      href: "https://dottmediaapk.web.app",
+      variant: "primary",
+    },
+    {
+      label: "Download iOS build",
+      href: "https://dottmediaapk.web.app",
+      variant: "outline",
+    },
+  ],
 };
 
 const featureHighlights = [
@@ -224,6 +242,75 @@ const AiSalesAgent = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="space-y-6">
+            <span className={badgeStyle}>Sales Agent App</span>
+            <h2 className="text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
+              Launch the AI Sales Agent workspace.
+            </h2>
+            <p className="max-w-2xl text-slate-700 dark:text-white/70">
+              Your team gets a live command center for inbound leads, qualification, and
+              follow-ups. The app syncs conversations to your AI-powered CRM workflows so every
+              handoff stays clean.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {salesAgentApp.downloads.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={
+                    item.variant === "primary"
+                      ? "inline-flex items-center gap-2 rounded-full bg-brand-amber px-5 py-2 text-sm font-semibold text-brand-dark shadow-glow transition hover:-translate-y-[1px] hover:shadow-brand-amber/40"
+                      : "inline-flex items-center gap-2 rounded-full border border-slate-200/80 px-5 py-2 text-sm font-semibold text-slate-800 transition hover:border-brand-amber/60 hover:text-brand-amber dark:border-white/15 dark:text-white/90"
+                  }
+                >
+                  <FiDownload /> {item.label}
+                </a>
+              ))}
+            </div>
+            <a
+              href={salesAgentApp.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+            >
+              Open web app <FiExternalLink />
+            </a>
+          </div>
+
+          <motion.div
+            {...cardMotion}
+            className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-4 shadow-2xl dark:border-white/10 dark:bg-[#101a2c]/80"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(124,58,237,0.15),transparent_35%),radial-gradient(circle_at_80%_50%,rgba(76,29,149,0.2),transparent_30%)] opacity-80" />
+            <div className="relative">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg dark:border-white/10 dark:bg-[#0f1624]">
+                <iframe
+                  title="Dott-Media AI Sales Agent App"
+                  src={salesAgentApp.url}
+                  loading="lazy"
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="mt-3 flex items-center justify-between text-xs text-slate-600 dark:text-white/60">
+                <span>Live preview from dottmediaapk.web.app</span>
+                <a
+                  href={salesAgentApp.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+                >
+                  Open in new tab <FiExternalLink />
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
