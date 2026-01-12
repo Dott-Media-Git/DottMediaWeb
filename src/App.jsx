@@ -22,6 +22,7 @@ import LocationDetail from "./pages/LocationDetail";
 import Locations from "./pages/Locations";
 import Portfolio from "./pages/Portfolio";
 import Privacy from "./pages/Privacy";
+import SocialRequirements from "./pages/SocialRequirements";
 import Services from "./pages/Services";
 import Terms from "./pages/Terms";
 
@@ -168,6 +169,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/ai-sales-agent" element={<AiSalesAgent />} />
+          <Route
+            path="/ai-sales-agent/social-requirements"
+            element={<SocialRequirements />}
+          />
           <Route path="/locations" element={<Locations />} />
           <Route path="/locations/:slug" element={<LocationDetail />} />
           <Route path="/industries" element={<Industries />} />

@@ -274,14 +274,22 @@ const AiSalesAgent = () => {
                 </a>
               ))}
             </div>
-            <a
-              href={salesAgentApp.url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
-            >
-              Open web app <FiExternalLink />
-            </a>
+            <div className="flex flex-wrap items-center gap-4 text-sm font-semibold">
+              <a
+                href={salesAgentApp.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+              >
+                Open web app <FiExternalLink />
+              </a>
+              <Link
+                to="/ai-sales-agent/social-requirements"
+                className="inline-flex items-center gap-2 text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+              >
+                Social connection requirements <FiArrowRight />
+              </Link>
+            </div>
           </div>
 
           <motion.div
@@ -289,16 +297,19 @@ const AiSalesAgent = () => {
             className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-4 shadow-2xl dark:border-white/10 dark:bg-[#101a2c]/80"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(124,58,237,0.15),transparent_35%),radial-gradient(circle_at_80%_50%,rgba(76,29,149,0.2),transparent_30%)] opacity-80" />
-            <div className="relative">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg dark:border-white/10 dark:bg-[#0f1624]">
-                <iframe
-                  title="Dott-Media AI Sales Agent App"
-                  src={salesAgentApp.url}
-                  loading="lazy"
-                  className="h-full w-full"
-                />
+            <div className="relative flex flex-col items-center">
+              <div className="relative w-full max-w-[320px] rounded-[2.5rem] border border-slate-200/80 bg-slate-900/90 p-3 shadow-2xl dark:border-white/10 dark:bg-[#0b1018]">
+                <div className="mx-auto mb-3 h-2 w-16 rounded-full bg-slate-700/70 dark:bg-white/20" />
+                <div className="aspect-[9/19] overflow-hidden rounded-[2rem] bg-white shadow-inner dark:bg-[#0f1624]">
+                  <iframe
+                    title="Dott-Media AI Sales Agent App"
+                    src={salesAgentApp.url}
+                    loading="lazy"
+                    className="h-full w-full"
+                  />
+                </div>
               </div>
-              <div className="mt-3 flex items-center justify-between text-xs text-slate-600 dark:text-white/60">
+              <div className="mt-4 flex w-full max-w-[320px] items-center justify-between text-xs text-slate-600 dark:text-white/60">
                 <span>Live preview from dottmediaapk.web.app</span>
                 <a
                   href={salesAgentApp.url}

@@ -105,6 +105,16 @@ const seoData = {
     type: "website",
     keywords: DEFAULT_KEYWORDS,
   },
+  socialRequirements: {
+    title: "Social Connection Requirements | AI Sales Agent",
+    description:
+      "Requirements and steps to connect Instagram, Facebook, LinkedIn, and Threads to the Dott-Media AI Sales Agent app.",
+    canonical: `${BASE_URL}/ai-sales-agent/social-requirements`,
+    image: OG_IMAGE,
+    imageAlt: OG_IMAGE_ALT,
+    type: "website",
+    keywords: DEFAULT_KEYWORDS,
+  },
 };
 
 export {
