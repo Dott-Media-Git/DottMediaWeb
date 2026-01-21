@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiArrowRight, FiCompass, FiUsers } from "react-icons/fi";
 import Seo from "../components/Seo";
 import seoData from "../data/seoData";
-import { stats, team, values } from "../data/siteData";
+import { stats, values } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
 const principles = [
@@ -37,6 +37,23 @@ const milestones = [
   {
     year: "2025",
     detail: "Launched AI-driven performance command centers for clients.",
+  },
+];
+
+const leaders = [
+  {
+    name: "Kutesa Isaac",
+    role: "CEO / Visionary",
+    image: "/team/kutesa-isaac.jpg",
+    bio: "Leads the company vision, partnerships, and growth strategy across AI-first solutions.",
+    focus: ["Vision", "Growth", "Partnerships"],
+  },
+  {
+    name: "Nume Brasio",
+    role: "Co-CEO / Architect",
+    image: "/team/nume-brasio.jpg",
+    bio: "Architects the AI systems and delivery frameworks that power client outcomes.",
+    focus: ["Architecture", "AI Systems", "Delivery"],
   },
 ];
 
@@ -118,33 +135,53 @@ const About = () => {
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className={badgeStyle}>Team</span>
+            <span className={badgeStyle}>Leadership</span>
             <h2 className="mt-3 text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
-              A cross-functional squad of strategists and makers
+              Founders building the Dott-Media vision
             </h2>
+            <p className="mt-2 max-w-2xl text-sm text-slate-700 dark:text-white/70">
+              The executive team guiding strategy, innovation, and delivery across every market.
+            </p>
           </div>
           <div className="flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-white/60">
-            <FiUsers /> Remote-first leadership
+            <FiUsers /> Executive leadership team
           </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {team.map((member) => (
+          {leaders.map((leader) => (
             <motion.div
-              key={member.name}
+              key={leader.name}
               {...cardMotion}
-              className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white px-4 py-4 shadow-sm dark:border-white/10 dark:bg-[#0f1624]/80"
+              className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-[#101a2c]/80"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-navy to-brand-amber text-lg font-semibold text-white">
-                {member.name
-                  .split(" ")
-                  .map((part) => part[0])
-                  .join("")}
+              <div className="relative h-72 w-full overflow-hidden">
+                <img
+                  src={leader.image}
+                  alt={`${leader.name}, ${leader.role}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/60">Dott-Media</p>
+                  <h3 className="text-2xl font-semibold">{leader.name}</h3>
+                  <p className="text-sm text-white/70">{leader.role}</p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-slate-900 dark:text-white">{member.name}</p>
-                <p className="text-sm text-slate-700 dark:text-white/70">{member.role}</p>
-                <p className="text-xs text-slate-500 dark:text-white/50">{member.focus}</p>
+              <div className="space-y-3 px-6 pb-6 pt-5">
+                <p className="text-sm text-slate-700 dark:text-white/70">{leader.bio}</p>
+                <div className="flex flex-wrap gap-2 text-xs text-slate-600 dark:text-white/60">
+                  {leader.focus.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-slate-200/80 px-3 py-1 dark:border-white/10"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
