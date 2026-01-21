@@ -18,6 +18,8 @@ import { industries, locations } from "../data/landingPages";
 import { projects, services, stats, testimonials } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
+const MotionLink = motion(Link);
+
 const salesAgentHighlights = [
   {
     title: "Instant lead response",
@@ -182,10 +184,12 @@ const Home = () => {
             {services.slice(0, 4).map((service) => {
               const Icon = service.icon;
               return (
-                <motion.div
+                <MotionLink
                   key={service.title}
+                  to={service.link || "/services"}
                   {...cardMotion}
-                  className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-[#0f1624]/80"
+                  className="group relative block overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-[#0f1624]/80"
+                  aria-label={`Learn more about ${service.title}`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-amber/10 to-transparent opacity-0 transition group-hover:opacity-100" />
                   <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-brand-amber/20 text-xl text-brand-amber">
@@ -197,10 +201,10 @@ const Home = () => {
                   <p className="mt-2 text-sm text-slate-700 dark:text-white/70">
                     {service.description}
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-brand-navy transition group-hover:text-brand-amber dark:text-white/80">
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition group-hover:text-brand-amber dark:text-white/80">
                     Learn more <FiArrowRight />
                   </div>
-                </motion.div>
+                </MotionLink>
               );
             })}
           </div>

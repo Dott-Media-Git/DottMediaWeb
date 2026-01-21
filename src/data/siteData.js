@@ -24,12 +24,14 @@ export const services = [
     description: "Always-on lead engagement, qualification, and meeting booking.",
     icon: FiMessageSquare,
     focus: ["Instant response", "Qualified handoff", "Calendar booking"],
+    link: "/ai-sales-agent",
   },
   {
     title: "AI HR Management System",
     description: "Recruiting, onboarding, and performance workflows powered by AI.",
     icon: FiUsers,
     focus: ["Hiring automation", "Employee lifecycle", "Performance insights"],
+    link: "/ai-hr-system",
   },
   {
     title: "Digital Marketing",
