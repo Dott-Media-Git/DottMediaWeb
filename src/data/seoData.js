@@ -3,9 +3,9 @@ const OG_IMAGE = `${BASE_URL}/og-image.svg`;
 const OG_IMAGE_ALT = "Dott-Media AI-Powered Digital Solutions";
 const DEFAULT_TITLE = "Dott-Media | AI-Powered Digital Agency";
 const DEFAULT_DESCRIPTION =
-  "Dott-Media is an AI-powered digital agency serving Kampala, Dubai, New York, England, Europe, and Johannesburg with AI Sales Agent solutions, automated marketing, and digital product delivery for startups, SMEs, agencies, and enterprise teams.";
+  "Dott-Media is an AI-powered digital agency serving Kampala, Dubai, New York, England, Europe, and Johannesburg with AI Sales Agent solutions, AI HR management systems, automated marketing, and digital product delivery for startups, SMEs, agencies, and enterprise teams.";
 const DEFAULT_KEYWORDS =
-  "Dott-Media, AI Sales Agent Solutions, Digital Showroom Development, Automated Social Media Marketing, AI Chatbot Integration, AI-Powered CRM, AI digital agency, Kampala, Uganda, Dubai, UAE, New York, England, Europe, Johannesburg, South Africa, AI marketing, branding, automation, web development, lead generation, AI startups, SMEs, digital marketing agencies, automotive dealers, fintech platforms, enterprise automation";
+  "Dott-Media, AI Sales Agent Solutions, AI HR Management System, Digital Showroom Development, Automated Social Media Marketing, AI Chatbot Integration, AI-Powered CRM, AI digital agency, Kampala, Uganda, Dubai, UAE, New York, England, Europe, Johannesburg, South Africa, AI marketing, branding, automation, web development, lead generation, AI startups, SMEs, digital marketing agencies, automotive dealers, fintech platforms, enterprise automation";
 
 const seoData = {
   home: {
@@ -32,6 +32,16 @@ const seoData = {
     description:
       "Always-on AI Sales Agent that qualifies leads, schedules meetings, powers social campaigns, and syncs with AI-powered CRM workflows.",
     canonical: `${BASE_URL}/ai-sales-agent`,
+    image: OG_IMAGE,
+    imageAlt: OG_IMAGE_ALT,
+    type: "product",
+    keywords: DEFAULT_KEYWORDS,
+  },
+  aiHrSystem: {
+    title: "AI HR Management System | Dott-Media",
+    description:
+      "AI-powered HR management system for recruiting, onboarding, performance reviews, compliance, and people analytics.",
+    canonical: `${BASE_URL}/ai-hr-system`,
     image: OG_IMAGE,
     imageAlt: OG_IMAGE_ALT,
     type: "product",

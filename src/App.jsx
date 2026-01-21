@@ -13,6 +13,7 @@ import {
 import { FaThreads } from "react-icons/fa6";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
+import AiHrSystem from "./pages/AiHrSystem";
 import AiSalesAgent from "./pages/AiSalesAgent";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -169,6 +170,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/ai-sales-agent" element={<AiSalesAgent />} />
+          <Route path="/ai-hr-system" element={<AiHrSystem />} />
           <Route
             path="/ai-sales-agent/social-requirements"
             element={<SocialRequirements />}

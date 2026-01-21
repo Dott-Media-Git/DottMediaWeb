@@ -24,9 +24,9 @@ const Services = () => {
               workflow.
             </p>
             <p className="max-w-2xl text-sm text-slate-600 dark:text-white/60">
-              High-demand offerings include AI Sales Agent solutions, digital showroom development,
-              automated social media marketing, AI chatbot integration, and AI-powered CRM
-              workflows.
+              High-demand offerings include AI Sales Agent solutions, AI-powered HR management
+              systems, digital showroom development, automated social media marketing, AI chatbot
+              integration, and AI-powered CRM workflows.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Strategy", "Creative", "Automation", "Engineering"].map((pill) => (

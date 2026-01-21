@@ -26,6 +26,12 @@ export const services = [
     focus: ["Instant response", "Qualified handoff", "Calendar booking"],
   },
   {
+    title: "AI HR Management System",
+    description: "Recruiting, onboarding, and performance workflows powered by AI.",
+    icon: FiUsers,
+    focus: ["Hiring automation", "Employee lifecycle", "Performance insights"],
+  },
+  {
     title: "Digital Marketing",
     description: "Performance-led campaigns, analytics, and omnichannel growth.",
     icon: FiBarChart2,

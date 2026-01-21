@@ -7,7 +7,10 @@ import {
   FiPlay,
   FiPlayCircle,
   FiStar,
+  FiShield,
+  FiTrendingUp,
   FiUserCheck,
+  FiUsers,
 } from "react-icons/fi";
 import Seo from "../components/Seo";
 import seoData from "../data/seoData";
@@ -33,6 +36,24 @@ const salesAgentHighlights = [
   },
 ];
 
+const hrHighlights = [
+  {
+    title: "Smarter hiring",
+    description: "AI shortlists candidates and speeds up screening.",
+    icon: FiUsers,
+  },
+  {
+    title: "Compliance ready",
+    description: "Policies, records, and approvals stay audit-safe.",
+    icon: FiShield,
+  },
+  {
+    title: "Performance clarity",
+    description: "Track growth, goals, and retention in one system.",
+    icon: FiTrendingUp,
+  },
+];
+
 const Home = () => {
   return (
     <>
@@ -48,9 +69,9 @@ const Home = () => {
             experiences. We craft the narrative, automate the ops, and deliver measurable momentum.
           </p>
           <p className="max-w-2xl text-sm text-slate-600 dark:text-white/60">
-            Core capabilities include AI Sales Agent solutions, digital showroom development,
-            automated social media marketing, AI chatbot integration, and AI-powered CRM for
-            businesses.
+            Core capabilities include AI Sales Agent solutions, AI HR management systems, digital
+            showroom development, automated social media marketing, AI chatbot integration, and
+            AI-powered CRM for businesses.
           </p>
           <p className="max-w-2xl text-sm text-slate-600 dark:text-white/60">
             Serving AI-focused startups, SMEs, agencies, automotive dealers, fintech platforms, and
@@ -239,6 +260,64 @@ const Home = () => {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-section-surface bg-white py-16 dark:bg-white/5">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div className="space-y-4">
+              <span className={badgeStyle}>Product</span>
+              <h2 className="text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
+                AI HR Management System built for growing teams.
+              </h2>
+              <p className="max-w-2xl text-slate-700 dark:text-white/70">
+                Automate hiring, onboarding, performance reviews, and compliance with an
+                AI-powered HR system that keeps employees supported and leadership informed.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {["Hiring automation", "Onboarding flows", "People analytics"].map((pill) => (
+                  <span
+                    key={pill}
+                    className="rounded-full border border-slate-200/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700 dark:border-white/10 dark:text-white/70"
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
+              <Link
+                to="/ai-hr-system"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition hover:text-brand-amber dark:text-brand-amber"
+              >
+                Explore AI HR System <FiArrowRight />
+              </Link>
+            </div>
+
+            <div className="grid gap-4">
+              {hrHighlights.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.title}
+                    {...cardMotion}
+                    className={`${surfaceClass} flex items-start gap-3 px-5 py-4`}
+                  >
+                    <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-amber/20 text-lg text-brand-amber">
+                      <Icon />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                        {item.title}
+                      </p>
+                      <p className="text-sm text-slate-700 dark:text-white/70">
+                        {item.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
