@@ -7,6 +7,8 @@ import { industries, locations } from "../data/landingPages";
 import { processSteps, services, stats, toolStack } from "../data/siteData";
 import { badgeStyle, cardMotion, surfaceClass } from "../utils/ui";
 
+const MotionLink = motion(Link);
+
 const Services = () => {
   return (
     <>
@@ -83,11 +85,13 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <motion.div
+                <MotionLink
                   key={service.title}
+                  to={service.link || "/services"}
                   {...cardMotion}
                   transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.04 }}
-                  className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-[#0f1624]/80"
+                  className="group relative block overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-[#0f1624]/80"
+                  aria-label={`Learn more about ${service.title}`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-amber/10 to-transparent opacity-0 transition group-hover:opacity-100" />
                   <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-brand-amber/20 text-xl text-brand-amber">
@@ -107,7 +111,7 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </MotionLink>
               );
             })}
           </div>
