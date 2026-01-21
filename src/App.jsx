@@ -30,6 +30,14 @@ import Terms from "./pages/Terms";
 const navLinks = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
+  { to: "/portfolio", label: "Portfolio" },
+  { to: "/about", label: "About Us" },
+  { to: "/contact", label: "Contact" },
+];
+
+const footerLinks = [
+  { to: "/", label: "Home", end: true },
+  { to: "/services", label: "Services" },
   { to: "/locations", label: "Locations" },
   { to: "/industries", label: "Industries" },
   { to: "/portfolio", label: "Portfolio" },
@@ -206,7 +214,7 @@ const App = () => {
               Explore
             </p>
             <div className="flex flex-col gap-2 text-sm text-slate-700 dark:text-white/70">
-              {navLinks.map((item) => (
+              {footerLinks.map((item) => (
                 <Link key={item.to} to={item.to} className="hover:text-brand-amber">
                   {item.label}
                 </Link>
