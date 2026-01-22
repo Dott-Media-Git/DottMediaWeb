@@ -266,6 +266,8 @@ const App = () => {
           </div>
         </div>
       </footer>
+
+      <elevenlabs-convai agent-id="agent_01jwwvkeyyetksahf5qqyg11q"></elevenlabs-convai>
     </div>
   );
 };
