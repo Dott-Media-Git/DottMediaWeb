@@ -76,7 +76,8 @@ export const projects = [
     title: "Bwinbet",
     category: "Sports Betting Platform",
     result: "Market-ready experience",
-    summary: "Mobile-first UX and brand presence tailored for a modern sportsbook.",
+    summary:
+      "BwinBet Uganda is a modern online sports engagement platform offering real-time match insights, live odds, and a wide range of global sporting events through a fast, mobile-optimized interface designed for African users.",
     tags: ["Sports betting", "Product UX", "Conversion"],
     image: "/portfolio/bwinbet-logo.jpeg",
     imageDark: "/portfolio/bwinbet-logo.jpeg",
