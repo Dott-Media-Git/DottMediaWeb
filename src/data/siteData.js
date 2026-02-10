@@ -73,6 +73,16 @@ export const services = [
 
 export const projects = [
   {
+    title: "Bwinbet",
+    category: "Sports Betting Platform",
+    result: "Market-ready experience",
+    summary: "Mobile-first UX and brand presence tailored for a modern sportsbook.",
+    tags: ["Sports betting", "Product UX", "Conversion"],
+    image: "/portfolio/bwinbet-logo.jpeg",
+    imageDark: "/portfolio/bwinbet-logo.jpeg",
+    imageAlt: "Bwinbet logo",
+  },
+  {
     title: "Aurora Commerce",
     category: "E-commerce Automation",
     result: "28% conversion lift",
